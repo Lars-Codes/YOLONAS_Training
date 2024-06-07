@@ -9,7 +9,7 @@ deactivate
 python3 -m venv conversion_env
 source conversion_env/bin/activate
 
-# Make sure all of your annotated images are saved to ./images directory
+# Make sure all of your annotated images are saved to ./images directory. Create it if not exists
 
 # Install dependencies
 pip3 install -r requirements.txt
@@ -31,6 +31,7 @@ else
     exit 1 
 fi
 
+mkdir checkpoints 
 # Train the model 
 python3 ./modules/train.py 
 
