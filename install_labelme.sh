@@ -1,5 +1,5 @@
 #!/bin/bash 
-# run with "source install_labelme.sh"
+# run with >>source install_labelme.sh so venv will activate to current shell
 
 echo "Installing Python version 3.8..."
 
@@ -15,7 +15,7 @@ python get-pip.py
 # install labelme 
 pip3 install labelme
 
-# run labelme 
-labelme 
+# run labelme. Save all images to ./images directory and head over to pipeline.sh. 
+labelme
 
 
