@@ -1,3 +1,4 @@
 torch 
 labelme2yolo
 openvino 
+opencv-python

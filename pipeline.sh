@@ -34,5 +34,7 @@ fi
 # Train the model 
 python3 ./modules/train.py 
 
+# Optimize with openvino 
+python3 ./modules/openvino.py 
 
 
