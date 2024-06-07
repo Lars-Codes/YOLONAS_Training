@@ -1,3 +1,5 @@
+Docs; https://docs.google.com/document/d/15AtoeVr-LfntrNtbFkFF9PEccBFLJp_1K4wa-lRymUo/edit?usp=sharing
+
 ## Bash scripts 
 Run all bash scripts with >> source <script_name>.sh, so venvs will activate to current shell 
 1. install_labelme.sh
