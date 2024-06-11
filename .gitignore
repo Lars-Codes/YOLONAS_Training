@@ -3,3 +3,4 @@ conversion_env/
 myenv/
 
 average_model.pth
+checkpoints/

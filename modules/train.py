@@ -7,10 +7,14 @@ from super_gradients.training import models
 from super_gradients.training.losses import PPYoloELoss
 from super_gradients.training.metrics import DetectionMetrics_050
 from super_gradients.training.models.detection_models.pp_yolo_e import PPYoloEPostPredictionCallback
+from dotenv import load_dotenv
+
+load_dotenv()
 
 HOME = os.getcwd()
 LOCATION = './images/YOLODataset'
-MODEL_ARCH = 'yolo_nas_l'
+MODEL_ARCH = os.getenv('MODEL_ARCH')
+print("ARCH, ", MODEL_ARCH)
 BATCH_SIZE = 8
 MAX_EPOCHS = 25
 CHECKPOINT_DIR = f'{HOME}/checkpoints'

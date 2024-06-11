@@ -32,10 +32,12 @@ else
 fi
 
 mkdir checkpoints 
-# Train the model 
+
+# Train the model, include code to convert to onnx
 python3 ./modules/train.py 
 
 # Optimize with openvino 
-python3 ./modules/openvino.py 
+mo --input_model model_name.onnx
+
 
 
