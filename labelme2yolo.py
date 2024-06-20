@@ -9,7 +9,10 @@ import numpy as np
 import math 
 import random 
 import shutil 
+import random 
+import shutil 
 
+labels = []
 labels = []
 
 # decode script from LabelMe. Decodes to (h, w, num channels) tuple 
@@ -20,13 +23,16 @@ def img_b64_to_arr(img_b64):
     return img_arr
 
 # Finds midpoint of box 
+# Finds midpoint of box 
 def midpoint(x1, x2, y1, y2): 
     return ((x1 + x2)/2, (y1 + y2)/2)
 
 # normalizes pixel values 
+# normalizes pixel values 
 def normalize(val_tuple, w, h): 
     return (val_tuple[0]/w, val_tuple[1]/h)  
 
+# Gets dimensions of box 
 # Gets dimensions of box 
 def dimensions(x1, x2, y1, y2): 
     return (abs(x2-x1), abs(y2-y1))
@@ -36,7 +42,17 @@ def convert_annotations(folder_path):
     label_path = folder_path + "/labels"
     for filename in os.listdir(label_path): 
         file_path = os.path.join(label_path, filename)
+# Converts labelme.json file to yolov5 annotation format .txt 
+def convert_annotations(folder_path):
+    label_path = folder_path + "/labels"
+    for filename in os.listdir(label_path): 
+        file_path = os.path.join(label_path, filename)
 
+        if filename.endswith('.json'): 
+            name = filename.split('.json')[0]
+            with open(file_path, 'r') as file: 
+                try: 
+                    loadjson = json.load(file)
         if filename.endswith('.json'): 
             name = filename.split('.json')[0]
             with open(file_path, 'r') as file: 
