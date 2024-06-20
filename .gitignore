@@ -4,3 +4,5 @@ myenv/
 
 average_model.pth
 checkpoints/
+
+vehicles/ 

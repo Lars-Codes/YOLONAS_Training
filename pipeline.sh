@@ -14,8 +14,8 @@ source conversion_env/bin/activate
 # Install dependencies
 pip3 install -r requirements.txt
 
-val = 0.15 # 15% of data for validation 
-test = 0.15 # 15% of data for testing
+val = 0.10 # 10% of data for validation 
+test = 0.10 # 10% of data for testing
 
 # Convert LabelMeJSON to YOLO JSON
 labelme2yolo --json_dir ./images/ --val_size $val --test_size $test
@@ -34,7 +34,7 @@ fi
 mkdir checkpoints 
 
 # Train the model, include code to convert to onnx
-python3 ./modules/train.py 
+# python3 ./modules/train.py 
 
 # Optimize with openvino 
 mo --input_model model_name.onnx

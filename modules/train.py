@@ -14,11 +14,10 @@ load_dotenv()
 HOME = os.getcwd()
 LOCATION = './images/YOLODataset'
 MODEL_ARCH = os.getenv('MODEL_ARCH')
-print("ARCH, ", MODEL_ARCH)
 BATCH_SIZE = 8
 MAX_EPOCHS = 25
 CHECKPOINT_DIR = f'{HOME}/checkpoints'
-EXPERIMENT_NAME = 'my_vehicles'
+EXPERIMENT_NAME = 'vehicles'
 
 CLASSES = ['0'] # Defined in YAML 
 trainer = Trainer(experiment_name=EXPERIMENT_NAME, ckpt_root_dir=CHECKPOINT_DIR)
