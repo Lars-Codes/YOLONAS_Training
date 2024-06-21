@@ -10,3 +10,9 @@ vehicles/
 yolo_nas.zip
 
 yolo_nas_s.onnx
+
+quantized_model.bin
+
+quantized_model.xml
+
+quantized_model.onnx
