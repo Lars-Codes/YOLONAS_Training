@@ -127,7 +127,7 @@ def generate_yaml(label_arr, folder_path):
     f.write("val: " + folder_path + "/val/images") 
 
 
-path = "./vehicles"
+path = "../vehicles"
 
 make_directories(path) # Generate train/test/valid directories with images/labels subdirectories 
 

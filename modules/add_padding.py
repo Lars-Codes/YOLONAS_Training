@@ -10,9 +10,6 @@ def addPadding(dir_path):
 
             padded_img = Image.new(img.mode, (1920, 1088), (0,0,255))
 
-            # print(padded_img.size)
-            # print("img original: ", img.size)
-
             padded_img.paste(img, (0,0)) # paste old image on top-left corner
 
             padded_img.save(file_path)
@@ -21,7 +18,4 @@ def addPadding(dir_path):
         print(e)
 
 
-addPadding("./vehicles/valid/images")
-
-img = Image.open("./vehicles/valid/images/frame_0002.jpg")
-print(img.size)
+addPadding("./vehicles/train/images")
