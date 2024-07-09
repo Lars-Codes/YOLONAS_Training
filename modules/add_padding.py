@@ -46,4 +46,4 @@ def addPadding(dir_path, new_w=640, new_h=640):
         print(e)
 
 
-addPadding("../pad_test", new_w = 1920, new_h=1088)
+addPadding("../pad_test", new_w = 640, new_h=640)
